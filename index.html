@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#14251e">
+  <title>PPT Aren Head — Business & Finance</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="#" id="brandHome">
+      <span class="brand-mark">AH</span>
+      <span><strong>PPT Aren Head</strong><small>Business workspace</small></span>
+    </a>
+    <div class="side-label">MENU UTAMA</div>
+    <button class="nav-item active" data-view="overview"><span>▦</span> Dashboard</button>
+    <button class="nav-item" data-view="companies"><span>▣</span> Perusahaan</button>
+    <button class="nav-item" data-view="groups"><span>◫</span> Grup perusahaan</button>
+    <button class="nav-item" data-view="categories"><span>◈</span> Kategori bisnis</button>
+    <div class="sidebar-note">
+      <span class="note-icon">✦</span>
+      <strong>Catatan penyimpanan</strong>
+      <p>Data tersimpan di browser ini menggunakan localStorage.</p>
+    </div>
+    <div class="side-bottom"><span class="status-dot"></span> Mode lokal aktif</div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow" id="eyebrow">WORKSPACE / RINGKASAN</p>
+        <h1 id="pageTitle">Dashboard</h1>
+        <p class="page-subtitle" id="pageSubtitle">Pantau seluruh grup dan perusahaan dalam satu tempat.</p>
+      </div>
+      <div class="top-actions">
+        <button class="btn btn-light" id="exportBtn">⇩ Ekspor data</button>
+        <button class="btn btn-primary" id="quickAddBtn">＋ Tambah perusahaan</button>
+      </div>
+    </header>
+
+    <section id="appView"></section>
+    <footer>© <span id="year"></span> PPT Aren Head <span>•</span> Data disimpan di browser perangkat ini.</footer>
+  </main>
+
+  <div class="modal-backdrop hidden" id="modalBackdrop">
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-head">
+        <div><p class="eyebrow" id="modalEyebrow">FORMULIR</p><h2 id="modalTitle">Tambah data</h2></div>
+        <button class="icon-btn" id="modalClose" aria-label="Tutup">×</button>
+      </div>
+      <form id="modalForm">
+        <div id="modalFields" class="form-grid"></div>
+        <div class="modal-actions">
+          <button type="button" class="btn btn-light" id="modalCancel">Batal</button>
+          <button type="submit" class="btn btn-primary" id="modalSave">Simpan</button>
+        </div>
+      </form>
+    </section>
+  </div>
+  <div class="toast hidden" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
